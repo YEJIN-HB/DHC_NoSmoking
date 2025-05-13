@@ -4,14 +4,17 @@ function saveProfile() {
     const year = document.getElementById('year').value;
     const cost = document.getElementById('cost').value;
     const number = document.getElementById('number').value;
+    const dayavg = document.getElementById('dayavg').value;
 
     localStorage.setItem('nickname', nickname);
     localStorage.setItem('age', age);
     localStorage.setItem('year', year);
     localStorage.setItem('cost', cost);
     localStorage.setItem('number', number);
+    localStorage.setItem('dayavg', dayavg);
 
     alert("저장되었습니다.");
+    window.location.href = "modeset.html";
 }
 
 
@@ -32,12 +35,14 @@ window.onload = function () {
     const cost = localStorage.getItem('cost');
     const number = localStorage.getItem('number');
     const profileImage = localStorage.getItem('profileImage');
+    const dayavg = localStorage.getItem('dayavg');
 
     if (nickname) document.getElementById('nickname').value = nickname;
     if (age) document.getElementById('age').value = age;
     if (year) document.getElementById('year').value = year;
     if (cost) document.getElementById('cost').value = cost;
     if (number) document.getElementById('number').value = number;
+    if (dayavg) document.getElementById('dayavg').value = dayavg;
 
     // 이미지 미리보기 복원
     if (profileImage) {

@@ -1,0 +1,64 @@
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #dfe7ff;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.mode-title {
+    font-size: 2vw;
+    text-align: center;
+    padding: 30px;
+    color: #4169E1;
+    background-color: #dfe7ff;
+    width: 100%;
+}
+
+.mode-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.mode-card {
+  width: 250px;
+  height: 200px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 20px;
+  background-color: white;
+}
+
+.mode-card h2 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.mode-card p {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.mode-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.mode-card.easy {
+  border: 3px solid #7dd87d;
+}
+
+.mode-card.normal {
+  border: 3px solid #f0ad4e;
+}
+
+.mode-card.hard {
+  border: 3px solid #e74c3c;
+}

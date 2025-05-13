@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>모드 선택</title>
+  <link rel="stylesheet" href="modeset.css">
+</head>
+<body>
+  <div class="mode-title">
+    <h1>금연 모드 선택</h1>
+</div>
+  <div class="mode-container">
+    <div class="mode-card easy" onclick="selectMode('easy')">
+      <h2>Easy Mode</h2>
+      <p>3일마다 2개비씩 감축<br>초보자용</p>
+    </div>
+    <div class="mode-card normal" onclick="selectMode('normal')">
+      <h2>Normal Mode</h2>
+      <p>1주일 단위 50% 감축<br>일반 사용자용</p>
+    </div>
+    <div class="mode-card hard" onclick="selectMode('hard')">
+      <h2>Hard Mode</h2>
+      <p>즉시 완전 금연<br>극한 도전</p>
+    </div>
+  </div>
+  <script src="modeset.js"></script>
+</body>
+</html>
