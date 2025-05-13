@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <div class="title">
+        <h1>초기정보</h1>
+    </div>
+    <div class="box">
+        <div class="photo" id="photoPreview"></div>
+        <label for="photoInput" class="upload-label">사진 업로드</label>
+        <input type="file" id="photoInput" accept="image/*" hidden>
+        <div class="section">
+          <div class="subTitle">닉네임</div>
+          <input type="text" class="subBox" id="nickname">
+          <div class="subTitle">나이</div>
+          <input type="text" class="subBox" id="age">
+          <div class="subTitle">흡연시작연도</div>
+          <div class="boxrow">
+            <input type="text" class="subBox_year1" id="year">
+            <div class="subBox_year2" id="year2"></div>
+            <p class="yeartext">년</p>
+          </div>
+          <div class="subTitle">담배가격</div>
+          <input type="text" class="subBox" id="cost">
+          <div class="subTitle">한갑당 개비수</div>
+          <input type="text" class="subBox" id="number">
+          <button class="savebutton" onclick="saveProfile()">저장하기</button>
+        </div>
+    </div>
+  <script src="profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #dfe7ff;
+    font-family: sans-serif;
+}
+
+.title {
+    font-size: 2vw;
+    text-align: center;
+    padding: 30px;
+    color: #4169E1;
+    background-color: #dfe7ff;
+    width: 100%;
+}
+
+.box {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #4169E1;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #4169E1;
+    background-color: #f3f3f3;
+    margin: 0 auto 20px auto;
+}
+.upload-label {
+    display: block;
+    margin: 10px auto;
+    padding: 8px 20px;
+    width: fit-content; /* ← 이게 핵심! */
+    background-color: #4169E1;
+    color: white;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.upload-label:hover {
+    background-color: #3559b0;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: white;
+}
+
+.subTitle {
+    font-size: 1.2rem;
+    color: #4169E1;
+    margin-bottom: 5px;
+    background-color: white;
+}
+
+.subBox {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #4169E1;
+    border-radius: 6px;
+    background-color: #f3f3f3;
+}
+
+.boxrow {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+    background-color: white;
+}
+
+.subBox_year1 {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #4169E1;
+    border-radius: 6px;
+    background-color: #f3f3f3;
+}
+
+.subBox_year2 {
+    flex-shrink: 0;
+    width: 80px;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid #4169E1;
+    border-radius: 6px;
+    background-color: #f3f3f3;
+    color: #4169E1;
+    font-weight: bold;
+}
+
+.yeartext {
+    margin-left: 5px;
+    background-color: white;
+    color: #4169E1;
+}
+
+.savebutton {
+    margin: 30px auto 0 auto;
+    padding: 10px 30px;
+    font-size: 1rem;
+    background-color: #4169E1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.savebutton:hover {
+    background-color: #3559b0;
+}
