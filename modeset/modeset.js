@@ -24,11 +24,17 @@
       };
     }
 
+      // 👉 금연 시작일이 없다면 오늘 날짜를 저장 (예외 방지)
+  if (!localStorage.getItem('startDate')) {
+    const today = new Date().toISOString().split('T')[0];
+    localStorage.setItem('startDate', today);
+  }
+
     // 저장
     localStorage.setItem('mode', JSON.stringify(modeData));
     
     alert(`"${modeData.label}"가 선택되었습니다.`);
     
     // 다음 화면으로 이동
-    window.location.href = "profile.html";
+    window.location.href = "main.html";
   }
