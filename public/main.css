@@ -1,0 +1,27 @@
+.title{
+    color: #4caf50;
+    font-weight: bolder;
+}
+.box {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 24px;
+  box-sizing: border-box;
+  margin : 10px;
+}
+.subbox{
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.subtitle{
+    font-weight: bolder;
+}

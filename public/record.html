@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>기록</title>
+  <link rel="stylesheet" href="record.css" />
+  <script src="record.js" defer></script>
+</head>
+<body>
+  <a href="main.html" class="home-button" title="홈으로 이동">
+  🏠
+</a>
+
+  <div class="container">
+    <div class="record-box">
+      <h2 class="title">금연 기록</h2>
+      
+      <div class="subbox">
+        <p class="date"></p>
+        <p clas="title">오전</p>
+        <button type="complete-button" onclick="complete()">성공</button>
+        <p clas="title">오후</p>
+        <p clas="title">밤</p>
+        
+
+
+        <button type="button" onclick="saveProfile()">저장</button>
+      </div>
+
+
+      <div class="subbox">
+        <p class="subtitle">과거 흡연 정보</p>
+        <p class="detail" id="duration">흡연 기간: -</p>
+        <p class="detail" id="total-cost">총 소비 금액: -</p>
+        <p class="detail" id="tar">섭취한 타르 양: -</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
