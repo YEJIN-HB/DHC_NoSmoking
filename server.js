@@ -1,11 +1,11 @@
 const express = require('express');
 const fs = require('fs');
+const path = require('path');
 const app = express();
 const port = 3000;
 
 app.use(express.static('public'));
 app.use(express.json());
-app.use(express.urlencoded({extended : false}));
 
 // profile.html 연결
 app.get('/profile', (req, res) => {
@@ -34,6 +34,41 @@ app.get('/get-profile', (req, res) => {
     res.status(500).send('profile.json 파일을 읽을 수 없습니다');
   }
 });
+
+
+// record.html 연결
+app.get('/record', (req, res) => {
+  res.sendFile(__dirname + '/public/record.html');
+});
+
+//record post요청
+app.post("/save-day-record", (req, res) => {
+  const newData = req.body;
+  const filePath = path.join(__dirname, "day-record.json");
+
+  let records = [];
+
+  // 기존 파일이 있으면 불러오기
+  if (fs.existsSync(filePath)) {
+    const fileData = fs.readFileSync(filePath, "utf8");
+    try {
+      records = JSON.parse(fileData);
+    } catch (e) {
+      console.error("JSON 파싱 실패:", e);
+    }
+  }
+
+  // 같은 날짜 있으면 제거
+  records = records.filter(record => record.date !== newData.date);
+
+  // 새 데이터 추가
+  records.push(newData);
+
+  // 저장
+  fs.writeFileSync(filePath, JSON.stringify(records, null, 2));
+  res.send("저장 완료");
+});
+
 
 
 app.listen(port, () => {

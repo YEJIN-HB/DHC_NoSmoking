@@ -1,0 +1,50 @@
+[
+  {
+    "date": "2025.06.06",
+    "count": {
+      "morning": 3,
+      "afternoon": 4,
+      "night": 3,
+      "total": 10
+    },
+    "craving": {
+      "morning": 5,
+      "afternoon": 4,
+      "night": 7,
+      "average": "5.33"
+    },
+    "tar": "100mg"
+  },
+  {
+    "date": "2025.06.05",
+    "count": {
+      "morning": 3,
+      "afternoon": 4,
+      "night": 3,
+      "total": 10
+    },
+    "craving": {
+      "morning": 5,
+      "afternoon": 4,
+      "night": 7,
+      "average": "5.33"
+    },
+    "tar": "100mg"
+  },
+  {
+    "date": "2025.06.04",
+    "count": {
+      "morning": 3,
+      "afternoon": 4,
+      "night": 3,
+      "total": 10
+    },
+    "craving": {
+      "morning": 5,
+      "afternoon": 4,
+      "night": 7,
+      "average": "5.33"
+    },
+    "tar": "100mg"
+  }
+]

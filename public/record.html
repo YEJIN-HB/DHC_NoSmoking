@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>금연 프로필</title>
+  <link rel="stylesheet" href="record.css" />
+  <script src="record.js" defer></script>
+</head>
+<body>
+  <a href="main.html" class="home-button" title="홈으로 이동">🏠</a>
+
+  <div class="container">
+    <div class="profile-box">
+      <h2 class="title">금연 기록</h2>
+
+      <div class="date-container">
+        <button class="date-button" id="prev-day">&lt;</button>
+        <span class="date" id="current-date"></span>
+        <button class="date-button" id="next-day">&gt;</button>
+      </div>
+
+      <div class="subbox">
+        <!-- 오전 -->
+        <div>
+          <label class="subtitle">오전(00:00 ~ 12:00)</label><br>
+          <label class="detail">오전에 피운 개비수</label>
+          <input type="number" id="morning-count" min="0" />
+          <div id="morning-craving" class="craving-bars">
+            <div class="bar" data-level="1"></div>
+            <div class="bar" data-level="2"></div>
+            <div class="bar" data-level="3"></div>
+            <div class="bar" data-level="4"></div>
+            <div class="bar" data-level="5"></div>
+            <div class="bar" data-level="6"></div>
+            <div class="bar" data-level="7"></div>
+            <div class="bar" data-level="8"></div>
+            <div class="bar" data-level="9"></div>
+            <div class="bar" data-level="10"></div>
+          </div>
+        </div>
+
+        <!-- 오후 -->
+        <div>
+          <label class="subtitle">오후(12:00 ~ 18:00)</label><br>
+          <label class="detail">오후에 피운 개비수</label>
+          <input type="number" id="afternoon-count" min="0" />
+          <div id="afternoon-craving" class="craving-bars">
+            <div class="bar" data-level="1"></div>
+            <div class="bar" data-level="2"></div>
+            <div class="bar" data-level="3"></div>
+            <div class="bar" data-level="4"></div>
+            <div class="bar" data-level="5"></div>
+            <div class="bar" data-level="6"></div>
+            <div class="bar" data-level="7"></div>
+            <div class="bar" data-level="8"></div>
+            <div class="bar" data-level="9"></div>
+            <div class="bar" data-level="10"></div>
+          </div>
+        </div>
+
+        <!-- 밤 -->
+        <div>
+          <label class="subtitle">밤(18:00 ~ 24:00)</label><br>
+          <label class="detail">밤에 피운 개비수</label>
+          <input type="number" id="night-count" min="0" />
+          <div id="night-craving" class="craving-bars">
+            <div class="bar" data-level="1"></div>
+            <div class="bar" data-level="2"></div>
+            <div class="bar" data-level="3"></div>
+            <div class="bar" data-level="4"></div>
+            <div class="bar" data-level="5"></div>
+            <div class="bar" data-level="6"></div>
+            <div class="bar" data-level="7"></div>
+            <div class="bar" data-level="8"></div>
+            <div class="bar" data-level="9"></div>
+            <div class="bar" data-level="10"></div>
+          </div>
+        </div>
+
+        <button type="button" onclick="saveProfile()">저장</button>
+      </div>
+
+      <div class="subbox">
+        <p class="subtitle">Report</p>
+        <p class="detail" id="today-number">하루동안 피운 개비 수: -</p>
+        <p class="detail" id="tar">섭취한 타르 양: -</p>
+        <p class="detail" id="carving-avg">흡연욕구(평균): -</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
