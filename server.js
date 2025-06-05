@@ -21,21 +21,6 @@ app.post("/save-profile", (req,res) =>{
     fs.writeFileSync('./profile.json', profileJSON);
 });
 
-//main.html 연결
-app.get('/main', (req,res) => {
-    res.sendFile(__dirname + '/public/main.html');
-});
-
-app.get('/get-profile', (req, res) => {
-  try {
-    const data = fs.readFileSync('./profile.json');
-    res.json(JSON.parse(data));
-  } catch (err) {
-    res.status(500).send('profile.json 파일을 읽을 수 없습니다');
-  }
-});
-
-
 // record.html 연결
 app.get('/record', (req, res) => {
   res.sendFile(__dirname + '/public/record.html');
@@ -70,6 +55,28 @@ app.post("/save-day-record", (req, res) => {
 });
 
 
+//main.html 연결
+app.get('/main', (req,res) => {
+    res.sendFile(__dirname + '/public/main.html');
+});
+
+app.get('/get-profile', (req, res) => {
+  try {
+    const data = fs.readFileSync('./profile.json');
+    res.json(JSON.parse(data));
+  } catch (err) {
+    res.status(500).send('profile.json 파일을 읽을 수 없습니다');
+  }
+});
+
+app.get('/get-dayrecord', (req, res) => {
+  try {
+    const data = fs.readFileSync('./day-record.json');
+    res.json(JSON.parse(data));
+  } catch (err) {
+    res.status(500).send('day-record.json 파일을 읽을 수 없습니다');
+  }
+});
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);

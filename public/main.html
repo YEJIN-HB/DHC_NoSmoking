@@ -1,35 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="main.css">
-    <script src="main.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+  <link rel="stylesheet" href="main.css" />
+  <script src="main.js" defer></script>
 </head>
 <body>
-<a href="/profile" style="text-decoration: none; color: inherit;">
-  <div class="box">
-    <h3 class="title">Profile</h3>
 
+  <!-- 🔹 프로필 영역 -->
+  <a href="/profile" style="text-decoration: none; color: inherit;">
     <div class="box">
-      <p class="subtitle">내 정보</p>
-      <p class="detail" id="name">Name</p>
-      <p class="detail" id="age">Age</p>
-      <p class="detail">금연 시작 일자 :<span id="start-date"></span> </p>
-      <p class="detail">금연 보조제 사용 여부: <span id="supplements"></span></p>
+      <h3 class="title">Profile</h3>
+
+      <div class="box">
+        <p class="subtitle">내 정보</p>
+        <p class="detail" id="name">Name</p>
+        <p class="detail" id="age">Age</p>
+        <p class="detail">금연 시작 일자 : <span id="start-date"></span></p>
+        <p class="detail">금연 보조제 사용 여부: <span id="supplements"></span></p>
+      </div>
+      
+      <div class="box">
+        <p class="subtitle">과거 흡연 정보</p>
+        <p class="detail">흡연 기간: <span id="during"></span>일</p>
+        <p class="detail">소비금액: <span id="con-money"></span>원</p>
+        <p class="detail">섭취한 타르양: <span id="total-tar"></span>mg</p>
+      </div>
     </div>
-    
-    <div class="box">
-      <p class="subtitle">과거 흡연 정보</p>
-      <p class="detail">흡연 기간: <span id="during"></span>일</p>
-      <p class="detail">소비금액: <span id="con-money"></span>원</p>
-      <p class="detail">섭취한 타르양: <span id="tar"></span>mg</p>
+  </a>
+
+  <!-- 🔹 금연 기록 영역 -->
+  <div class="box">
+    <div class="profile-box">
+      <h2 class="title">
+        <a href="/record" style="text-decoration: none; color: inherit;">금연 기록</a>
+      </h2>
+
+      <div class="date-container">
+        <button class="date-button" id="prev-day">&lt;</button>
+        <span class="date" id="current-date"></span>
+        <button class="date-button" id="next-day">&gt;</button>
+      </div>
+
+      <div class="subbox">
+        <!-- 오전 -->
+        <div>
+          <label class="subtitle">오전(00:00 ~ 12:00)</label><br />
+          <label class="detail">오전에 피운 개비수 <span id="morning-count"></span></label>
+          <div id="morning-craving-bars" class="craving-bars">
+            <div class="bar" data-level="1"></div>
+            <div class="bar" data-level="2"></div>
+            <div class="bar" data-level="3"></div>
+            <div class="bar" data-level="4"></div>
+            <div class="bar" data-level="5"></div>
+            <div class="bar" data-level="6"></div>
+            <div class="bar" data-level="7"></div>
+            <div class="bar" data-level="8"></div>
+            <div class="bar" data-level="9"></div>
+            <div class="bar" data-level="10"></div>
+          </div>
+        </div>
+
+        <!-- 오후 -->
+        <div>
+          <label class="subtitle">오후(12:00 ~ 18:00)</label><br />
+          <label class="detail">오후에 피운 개비수 <span id="afternoon-count"></span></label>
+          <div id="afternoon-craving-bars" class="craving-bars">
+            <div class="bar" data-level="1"></div>
+            <div class="bar" data-level="2"></div>
+            <div class="bar" data-level="3"></div>
+            <div class="bar" data-level="4"></div>
+            <div class="bar" data-level="5"></div>
+            <div class="bar" data-level="6"></div>
+            <div class="bar" data-level="7"></div>
+            <div class="bar" data-level="8"></div>
+            <div class="bar" data-level="9"></div>
+            <div class="bar" data-level="10"></div>
+          </div>
+        </div>
+
+        <!-- 밤 -->
+        <div>
+          <label class="subtitle">밤(18:00 ~ 24:00)</label><br />
+          <label class="detail">밤에 피운 개비수 <span id="night-count"></span></label>
+          <div id="night-craving-bars" class="craving-bars">
+            <div class="bar" data-level="1"></div>
+            <div class="bar" data-level="2"></div>
+            <div class="bar" data-level="3"></div>
+            <div class="bar" data-level="4"></div>
+            <div class="bar" data-level="5"></div>
+            <div class="bar" data-level="6"></div>
+            <div class="bar" data-level="7"></div>
+            <div class="bar" data-level="8"></div>
+            <div class="bar" data-level="9"></div>
+            <div class="bar" data-level="10"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subbox">
+        <p class="subtitle">Report</p>
+        <p class="detail" id="today-number">하루동안 피운 개비 수: -</p>
+        <p class="detail" id="today-tar">섭취한 타르 양: -</p>
+        <p class="detail" id="carving-avg">흡연욕구(평균): -</p>
+      </div>
     </div>
   </div>
-</a>
-
 
 </body>
-
 </html>

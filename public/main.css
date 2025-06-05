@@ -25,3 +25,67 @@
 .subtitle{
     font-weight: bolder;
 }
+
+.date-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.date-container button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#current-date {
+  font-size: 18px;
+  font-weight: bold;
+}
+.craving-bars {
+  display: flex;
+  gap: 6px;
+  margin: 10px 0;
+}
+
+.bar {
+  width: 15px;
+  height: 40px;
+  background-color: #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.bar.active {
+  background-color: #4caf50;
+}
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  display: block;
+  margin: 0 auto;
+}
+
+button:hover {
+  background-color: #43a047;
+  transform: scale(1.03);
+}
+
+button:active {
+  background-color: #388e3c;
+  transform: scale(0.97);
+}
