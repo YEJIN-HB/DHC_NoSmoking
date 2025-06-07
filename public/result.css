@@ -43,57 +43,11 @@ body {
   font-weight: 600;
   margin: 10px 0;
 }
-.detail{
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin: 10px 0;
-}
-button {
-  background-color: #4caf50;
-  color: white;
-  padding: 10px 20px;
-  font-size: 1rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
-  display: block;
-  margin: 0 auto;
-}
 
-button:hover {
-  background-color: #43a047;
-  transform: scale(1.03);
-}
-
-button:active {
-  background-color: #388e3c;
-  transform: scale(0.97);
-}
-
-/* 각 항목 그룹 정렬 */
-.input-group {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 16px;  /* 🔹 항목 간 간격 */
-}
-
-/* 입력 필드 */
-.input-group input,
-.input-group select {
-  padding: 10px;
-  font-size: 1rem;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  margin-top: 6px;  /* 🔹 label과 input 사이 간격 */
-}
-
-/* 라벨 스타일 */
-.input-group label {
-  font-weight: bold;
-  color: #333;
-  font-size: 0.95rem;
+.detail {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 10px 0;
 }
 
 .home-button {
@@ -120,8 +74,37 @@ button:active {
   color: white;
   transform: scale(1.1);
 }
-.size{
-  width: 80px; 
-  font-size: 0.9rem; 
-  padding: 4px;
+
+.date-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.date-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.date-button:hover {
+  background-color: #43a047;
+  transform: scale(1.05);
+}
+
+.date-button:active {
+  background-color: #388e3c;
+  transform: scale(0.95);
+}
+
+.date {
+  font-size: 18px;
+  font-weight: bold;
 }

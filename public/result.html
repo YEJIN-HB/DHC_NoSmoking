@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>금연 프로필</title>
+  <link rel="stylesheet" href="result.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="result.js" defer></script>
+</head>
+<body>
+  <a href="main.html" class="home-button" title="홈으로 이동">
+  🏠
+</a>
+
+  <div class="container">
+    <div class="profile-box">
+      <h2 class="title">통계/분석</h2>
+      
+      <div class="subbox">
+        <p class="detail">연속 성공 일수</p>
+        <span id="continue-day">--일</span>
+        <p class="detail">피우지 않은 담배 개비수</p>
+        <span id="unsmoke-count">--개비</span>
+        <p class="detail">절약 금액</p>
+        <span id="save-money">--원</span>
+        <p class="detail">늘어난 수명</p>
+        <span id="get-life">--일</span>
+      </div>
+
+      <!-- 흡연 욕구 변화 -->
+      <div class="subbox">
+        <p class="subtitle">흡연 욕구 변화</p>
+        <div class="date-container">
+          <button class="date-button" id="craving-prev">&lt;</button>
+          <span class="date" id="craving-month">--.--</span>
+          <button class="date-button" id="craving-next">&gt;</button>
+        </div>
+        <canvas id="craving" width="400" height="200"></canvas>
+      </div>
+
+      <!-- 흡연 개비 수 변화 -->
+      <div class="subbox">
+        <p class="subtitle">흡연 개비 수 변화</p>
+        <div class="date-container">
+          <button class="date-button" id="cig-prev">&lt;</button>
+          <span class="date" id="cig-month">--.--</span>
+          <button class="date-button" id="cig-next">&gt;</button>
+        </div>
+        <canvas id="cig-count" width="400" height="200"></canvas>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

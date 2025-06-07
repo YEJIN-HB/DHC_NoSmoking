@@ -1,4 +1,5 @@
 let currentDate = new Date();
+let continue_day = 0;
 
 // 날짜 업데이트
 function updateDate() {
@@ -23,8 +24,25 @@ document.getElementById("next-day").addEventListener("click", () => {
 
 updateDate(); // 초기 날짜 표시
 
+
+async function profilelogJSONData() {
+  try {
+    const response = await fetch("/get-profile");
+    const jsonData = await response.json();
+    return jsonData; // 🔹 데이터를 반환함
+  } catch (err) {
+    console.error("프로필 데이터 불러오기 실패:", err);
+    return null;
+  }
+}
+
+
+
 // 저장 버튼 동작
-function saveProfile() {
+async function saveProfile() {
+  const jsonData = await profilelogJSONData(); // 🔹 데이터를 받아옴
+  if (!jsonData) return; // 실패 시 중단
+
   const dateStr = formatDate(currentDate);
 
   const morning = +document.getElementById("morning-count").value || 0;
@@ -38,39 +56,48 @@ function saveProfile() {
   const nCraving = document.querySelectorAll("#night-craving .bar.active").length;
   const avg = ((mCraving + aCraving + nCraving) / 3).toFixed(2);
 
+  let today_result;
+
+  if (total <= Number(jsonData.oksmoke)) {
+    today_result = 'T';
+
+  } else {
+    today_result = 'F';
+  }
+
   const data = {
     date: dateStr,
     count: { morning, afternoon, night, total },
     craving: { morning: mCraving, afternoon: aCraving, night: nCraving, average: avg },
-    tar
+    tar,
+    today_result, continue_day
   };
 
-  // 결과 출력
   console.log("저장할 데이터:", JSON.stringify(data, null, 2));
 
-  // 보고서 표시
   document.getElementById("today-number").textContent = `하루동안 피운 개비 수: ${total}`;
   document.getElementById("tar").textContent = `섭취한 타르 양: ${tar}`;
   document.getElementById("carving-avg").textContent = `흡연욕구(평균): ${avg}`;
 
-  fetch("/save-day-record", {
-    method : "POST",
-    headers: {
-      "Content-Type" : "application/json",
-    },
-    body : JSON.stringify(data),
-  })
-  .then(response => {
-    if(response.ok){
+  try {
+    const res = await fetch("/save-day-record", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (res.ok) {
       console.log("저장 성공");
-    } else{
+    } else {
       console.error("저장 실패");
     }
-  })
-  .catch(error => {
-    console.error("오류 발생:", error);
-  });
+  } catch (err) {
+    console.error("저장 요청 실패:", err);
+  }
 }
+
 
 // 욕구 바 클릭
 document.querySelectorAll(".craving-bars").forEach(container => {

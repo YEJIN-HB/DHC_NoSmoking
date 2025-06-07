@@ -55,6 +55,13 @@ app.post("/save-day-record", (req, res) => {
 });
 
 
+//result.html
+app.get('/result', (req,res) => {
+    res.sendFile(__dirname + '/public/result.html');
+});
+
+
+
 //main.html 연결
 app.get('/main', (req,res) => {
     res.sendFile(__dirname + '/public/main.html');
@@ -68,6 +75,7 @@ app.get('/get-profile', (req, res) => {
     res.status(500).send('profile.json 파일을 읽을 수 없습니다');
   }
 });
+
 
 app.get('/get-dayrecord', (req, res) => {
   try {

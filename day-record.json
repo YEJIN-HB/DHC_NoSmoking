@@ -1,50 +1,110 @@
 [
   {
-    "date": "2025.06.06",
+    "date": "2025.06.02",
     "count": {
-      "morning": 3,
-      "afternoon": 4,
-      "night": 3,
-      "total": 10
+      "morning": 1,
+      "afternoon": 2,
+      "night": 1,
+      "total": 4
     },
     "craving": {
-      "morning": 5,
-      "afternoon": 4,
-      "night": 7,
-      "average": "5.33"
+      "morning": 4,
+      "afternoon": 6,
+      "night": 4,
+      "average": "4.67"
     },
-    "tar": "100mg"
+    "tar": "40mg",
+    "today_result": "T",
+    "continue_day": 0
+  },
+  {
+    "date": "2025.06.06",
+    "count": {
+      "morning": 2,
+      "afternoon": 2,
+      "night": 2,
+      "total": 6
+    },
+    "craving": {
+      "morning": 4,
+      "afternoon": 6,
+      "night": 5,
+      "average": "5.00"
+    },
+    "tar": "60mg",
+    "today_result": "T",
+    "continue_day": 0
   },
   {
     "date": "2025.06.05",
     "count": {
-      "morning": 3,
-      "afternoon": 4,
-      "night": 3,
-      "total": 10
+      "morning": 2,
+      "afternoon": 10,
+      "night": 2,
+      "total": 14
     },
     "craving": {
-      "morning": 5,
-      "afternoon": 4,
-      "night": 7,
-      "average": "5.33"
+      "morning": 4,
+      "afternoon": 6,
+      "night": 5,
+      "average": "5.00"
     },
-    "tar": "100mg"
+    "tar": "140mg",
+    "today_result": "F",
+    "continue_day": 0
   },
   {
     "date": "2025.06.04",
     "count": {
-      "morning": 3,
-      "afternoon": 4,
-      "night": 3,
-      "total": 10
+      "morning": 1,
+      "afternoon": 5,
+      "night": 1,
+      "total": 7
     },
     "craving": {
-      "morning": 5,
-      "afternoon": 4,
-      "night": 7,
-      "average": "5.33"
+      "morning": 4,
+      "afternoon": 6,
+      "night": 5,
+      "average": "5.00"
     },
-    "tar": "100mg"
+    "tar": "70mg",
+    "today_result": "T",
+    "continue_day": 0
+  },
+  {
+    "date": "2025.06.03",
+    "count": {
+      "morning": 1,
+      "afternoon": 4,
+      "night": 1,
+      "total": 6
+    },
+    "craving": {
+      "morning": 4,
+      "afternoon": 6,
+      "night": 5,
+      "average": "5.00"
+    },
+    "tar": "60mg",
+    "today_result": "T",
+    "continue_day": 0
+  },
+  {
+    "date": "2025.06.07",
+    "count": {
+      "morning": 1,
+      "afternoon": 1,
+      "night": 1,
+      "total": 3
+    },
+    "craving": {
+      "morning": 4,
+      "afternoon": 6,
+      "night": 3,
+      "average": "4.33"
+    },
+    "tar": "30mg",
+    "today_result": "T",
+    "continue_day": 0
   }
 ]
