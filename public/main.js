@@ -273,6 +273,18 @@ function drawCigaretteCountChart() {
   });
 }
 
+function applyGoalProgress() {
+  if (!profileData || !profileData.Goal_D) return;
+
+  const goal = Number(profileData.Goal_D);
+  const achieved = continue_day;
+  const percent = Math.min((achieved / goal) * 100, 100).toFixed(1);
+
+  document.getElementById("goal-progress-bar").style.width = `${percent}%`;
+  document.getElementById("goal-progress-text").textContent = `${percent}% 달성`;
+}
+
+
 // 🔹 실행
 async function main() {
   await loadProfileData();
@@ -285,6 +297,7 @@ async function main() {
   drawCravingChart();
   drawCigaretteCountChart();
   setupDateButtons();
+  applyGoalProgress()
 }
 
 document.addEventListener("DOMContentLoaded", main);
