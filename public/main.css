@@ -111,6 +111,8 @@ body {
   display: flex;
   gap: 4px;
   margin: 10px 0;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .bar {
@@ -149,4 +151,50 @@ button:hover {
 button:active {
   background-color: #388e3c;
   transform: scale(0.97);
+}
+
+/* ✅ 반응형 처리 */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px;
+  }
+
+  .left-column,
+  .right-column {
+    min-width: 100%;
+  }
+
+  .box {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 1.3rem;
+  }
+
+  .subtitle,
+  .detail {
+    font-size: 0.95rem;
+  }
+
+  .craving-bars {
+    justify-content: center;
+  }
+
+  canvas {
+    max-width: 100%;
+  }
+
+  .date-container {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .date-button,
+  .date-container button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
 }

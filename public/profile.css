@@ -43,11 +43,13 @@ body {
   font-weight: 600;
   margin: 10px 0;
 }
-.detail{
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin: 10px 0;
+
+.detail {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 10px 0;
 }
+
 button {
   background-color: #4caf50;
   color: white;
@@ -76,7 +78,7 @@ button:active {
 .input-group {
   display: flex;
   flex-direction: column;
-  margin-bottom: 16px;  /* 🔹 항목 간 간격 */
+  margin-bottom: 16px;
 }
 
 /* 입력 필드 */
@@ -86,7 +88,7 @@ button:active {
   font-size: 1rem;
   border-radius: 6px;
   border: 1px solid #ccc;
-  margin-top: 6px;  /* 🔹 label과 input 사이 간격 */
+  margin-top: 6px;
 }
 
 /* 라벨 스타일 */
@@ -120,8 +122,41 @@ button:active {
   color: white;
   transform: scale(1.1);
 }
-.size{
-  width: 80px; 
-  font-size: 0.9rem; 
+
+.size {
+  width: 80px;
+  font-size: 0.9rem;
   padding: 4px;
+}
+
+/* ✅ 반응형 처리 */
+@media (max-width: 600px) {
+  body {
+    padding: 20px 10px;
+    align-items: flex-start;
+  }
+
+  .profile-box {
+    padding: 24px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .subtitle,
+  .detail {
+    font-size: 1rem;
+  }
+
+  .size {
+    width: 60px;
+    font-size: 0.85rem;
+  }
+
+  .home-button {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
 }

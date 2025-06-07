@@ -122,11 +122,12 @@ button:active {
   transform: scale(1.1);
 }
 
-/* ✅ 흡연욕구 바 가로 정렬 */
 .craving-bars {
   display: flex;
   gap: 6px;
   margin: 10px 0;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .bar {
@@ -140,4 +141,36 @@ button:active {
 
 .bar.active {
   background-color: #4caf50;
+}
+
+/* ✅ 반응형 처리 */
+@media (max-width: 600px) {
+  .profile-box {
+    padding: 24px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .subtitle,
+  .detail {
+    font-size: 1rem;
+  }
+
+  .date-container {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .bar {
+    width: 12px;
+    height: 36px;
+  }
+
+  .home-button {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
 }
