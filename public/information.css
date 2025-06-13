@@ -14,13 +14,6 @@ body {
   max-width: 780px;
 }
 
-.profile-box {
-  background-color: #ffffff;
-  border-radius: 20px;
-  padding: 36px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-}
-
 .title {
   color: #4caf50;
   font-size: 2rem;
@@ -29,7 +22,16 @@ body {
   margin-bottom: 32px;
 }
 
-.subbox {
+.intro {
+  font-size: 1.05rem;
+  color: #555;
+  margin: -16px 0 24px;
+  text-align: center;
+}
+
+/* ✅ 공통 디자인 (subbox/card 통일) */
+.subbox,
+.card {
   background-color: #fcfcfc;
   border-left: 6px solid #4caf50;
   border-radius: 12px;
@@ -38,7 +40,8 @@ body {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
 }
 
-.subtitle {
+.subtitle,
+.card h2 {
   color: #388e3c;
   font-size: 1.2rem;
   font-weight: 700;
@@ -47,7 +50,8 @@ body {
   padding-bottom: 6px;
 }
 
-.detail {
+.detail,
+.card ul {
   font-size: 1.05rem;
   font-weight: 500;
   color: #333;
@@ -56,7 +60,8 @@ body {
   padding-left: 0.5rem;
 }
 
-.detail li {
+.detail li,
+.card ul li {
   margin-bottom: 8px;
   list-style-type: disc;
   list-style-position: inside;
@@ -102,10 +107,6 @@ a:hover {
     padding: 20px 10px;
   }
 
-  .profile-box {
-    padding: 24px;
-  }
-
   .container {
     max-width: 100%;
   }
@@ -115,17 +116,24 @@ a:hover {
     margin-bottom: 24px;
   }
 
-  .subtitle {
+  .intro {
+    font-size: 0.95rem;
+  }
+
+  .subbox,
+  .card {
+    padding: 20px;
+  }
+
+  .subtitle,
+  .card h2 {
     font-size: 1rem;
     padding-bottom: 4px;
   }
 
-  .detail {
+  .detail,
+  .card ul {
     font-size: 0.95rem;
-  }
-
-  .subbox {
-    padding: 20px;
   }
 
   .home-button {
