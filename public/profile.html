@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>금연 프로필</title>
+  <link rel="stylesheet" href="profile.css" />
+  <script src="profile.js" defer></script>
+</head>
+<body>
+  <a href="main.html" class="home-button" title="홈으로 이동">
+  🏠
+</a>
+
+  <div class="container">
+    <div class="profile-box">
+      <h2 class="title">Profile</h2>
+      
+      <div class="subbox">
+        <label class="detail">이름 <input type="text" id="name"></label><br>
+        <label class="detail">나이 <input type="number" id="age"></label><br>
+        <label class="detail">흡연 시작 년도<input type="date" id="smokeday"></label><br>
+        <label class="detail">하루 평균 흡연량 <input type="number" id="dayavg"></label>개비<br>
+        <label class="detail">담배가격 <input type="number" id="cost"></label>원<br>
+        <label class="detail">금연 시작 일자 <input type="date" id="start-date"></label><br>
+        <label class="detail">금연 보조제 사용 여부
+          <select id="supplements">
+            <option value="예">사용</option>
+            <option value="아니오">미사용</option>
+          </select>
+        </label><br>
+      </div>
+
+
+      <div class="subbox">
+        <p class="subtitle">과거 흡연 정보</p>
+        <p class="detail" id="duration">흡연 기간: -</p>
+        <p class="detail" id="total-cost">총 소비 금액: -</p>
+        <p class="detail" id="tar">섭취한 타르 양: -</p>
+      </div>
+
+      <div class="subbox">
+        <p class="subtitle">목표 설정</p>
+
+        <label class="detail">기간
+          <label class="detail"> <input class="size" type="number" id="day"></label>
+          <select class="size" id="during">
+            <option value="일">일</option>
+            <option value="주">주</option>
+            <option value="달">달</option>
+          </select>
+        </label><br>
+
+        <label class="detail">허용 개비 수
+          <label class="detail"> <input class="size" type="number" id="oksmoke">개비</label>
+        </label><br>
+
+      </div>
+      <button type="button" onclick="saveProfile()">저장</button>
+    </div>
+    
+  </div>
+</body>
+</html>

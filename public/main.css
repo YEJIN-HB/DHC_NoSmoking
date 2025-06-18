@@ -1,0 +1,211 @@
+body {
+  background-color: #f5f7fa;
+  font-family: 'Pretendard', 'Arial', sans-serif;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+  min-width: 500px;
+}
+
+.right-column {
+  flex: 1;
+  min-width: 500px;
+}
+
+.box {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.profile-box {
+  background-color: #ffffff;
+}
+
+.subbox {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.title {
+  color: #4caf50;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  color: #4caf50;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.detail {
+  font-size: 1rem;
+  margin: 6px 0;
+}
+
+.date-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.date-button,
+.date-container button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.date-button:hover,
+.date-container button:hover {
+  background-color: #43a047;
+  transform: scale(1.03);
+}
+
+.date-button:active,
+.date-container button:active {
+  background-color: #388e3c;
+  transform: scale(0.97);
+}
+
+#current-date {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* 흡연 욕구 막대 */
+.craving-bars {
+  display: flex;
+  gap: 4px;
+  margin: 10px 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.bar {
+  width: 12px;
+  height: 40px;
+  background-color: #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.bar.active {
+  background-color: #4caf50;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #43a047;
+  transform: scale(1.03);
+}
+
+button:active {
+  background-color: #388e3c;
+  transform: scale(0.97);
+}
+
+/* 반응형 처리 */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px;
+  }
+
+  .left-column,
+  .right-column {
+    min-width: 100%;
+  }
+
+  .box {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 1.3rem;
+  }
+
+  .subtitle,
+  .detail {
+    font-size: 0.95rem;
+  }
+
+  .craving-bars {
+    justify-content: center;
+  }
+
+  canvas {
+    max-width: 100%;
+  }
+
+  .date-container {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .date-button,
+  .date-container button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+/*  목표 진행률 바 */
+.progress-container {
+  width: 100%;
+  height: 24px;
+  background-color: #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #4caf50;
+  width: 0%;
+  transition: width 0.4s ease;
+}

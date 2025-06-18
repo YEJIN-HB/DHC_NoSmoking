@@ -1,0 +1,74 @@
+[
+  {
+    "date": "2025.06.15",
+    "count": {
+      "morning": 5,
+      "afternoon": 10,
+      "night": 2,
+      "total": 17
+    },
+    "craving": {
+      "morning": 6,
+      "afternoon": 7,
+      "night": 7,
+      "average": "6.67"
+    },
+    "tar": "170mg",
+    "today_result": "T",
+    "continue_day": 0
+  },
+  {
+    "date": "2025.06.16",
+    "count": {
+      "morning": 2,
+      "afternoon": 2,
+      "night": 5,
+      "total": 9
+    },
+    "craving": {
+      "morning": 8,
+      "afternoon": 5,
+      "night": 7,
+      "average": "6.67"
+    },
+    "tar": "90mg",
+    "today_result": "T",
+    "continue_day": 0
+  },
+  {
+    "date": "2025.06.17",
+    "count": {
+      "morning": 4,
+      "afternoon": 5,
+      "night": 2,
+      "total": 11
+    },
+    "craving": {
+      "morning": 3,
+      "afternoon": 8,
+      "night": 4,
+      "average": "5.00"
+    },
+    "tar": "110mg",
+    "today_result": "T",
+    "continue_day": 0
+  },
+  {
+    "date": "2025.06.18",
+    "count": {
+      "morning": 2,
+      "afternoon": 7,
+      "night": 3,
+      "total": 12
+    },
+    "craving": {
+      "morning": 6,
+      "afternoon": 6,
+      "night": 6,
+      "average": "6.00"
+    },
+    "tar": "120mg",
+    "today_result": "T",
+    "continue_day": 0
+  }
+]
